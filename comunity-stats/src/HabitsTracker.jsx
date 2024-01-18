@@ -1,12 +1,10 @@
-//import { useState } from "react";
 import "./Habits.css";
-import { habits, days, tableName, weeklyHabits } from "./utils";
+import { habitsBasic, days, tableName, weeklyHabits } from "./utils";
 let habitKey;
 
-function Habits() {
-	//const [count, setCount] = useState(0);
-	console.log(habits);
-	console.log(days);
+function HabitsTracker() {
+	//console.log(habitsBasic);
+	//console.log(days);
 
 	return (
 		<section className="weekly-habits">
@@ -17,8 +15,6 @@ function Habits() {
 						<tr className="days">
 							<td className="habit">{tableName}</td>
 							{Object.entries(days).map(([key, value]) => {
-								console.log("entries-key", key); //entries-key ['d1']
-								console.log("entries-value", value); //entries-value ['Lunes']
 								return (
 									<td className={`day ${key}`} key={key}>
 										{value.slice(0, 1)} {/*takes the first letter of the day*/}
@@ -28,7 +24,7 @@ function Habits() {
 						</tr>
 					</thead>
 					<tbody>
-						{Object.entries(habits).map(([key, value]) => {
+						{Object.entries(habitsBasic).map(([key, value]) => {
 							habitKey = key;
 
 							return (
@@ -36,13 +32,12 @@ function Habits() {
 									<td className={`habit ${key}`} key={key}>
 										{value}
 									</td>
-									{Object.entries(days).map(([key, value]) => {
-										console.log(habitKey);
+									{Object.entries(days).map(([key]) => {
 										return (
 											<td className={`day`} key={key}>
 												<input
 													type="checkbox"
-													name={value}
+													name={`${habitKey}-${key}`}
 													className={`${habitKey} ${key}`}
 												/>
 											</td>
@@ -58,4 +53,4 @@ function Habits() {
 	);
 }
 
-export default Habits;
+export default HabitsTracker;
