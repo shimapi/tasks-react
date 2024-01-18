@@ -1,0 +1,41 @@
+.weekly-habits {
+	min-width: 400px;
+}
+
+.habits-container {
+	border: solid white 1px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+/**
+.days,
+.habits {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	list-style: none;
+}
+.days {
+	border-bottom: 1px solid white;
+	padding-bottom: 20px;
+}
+*/
+.days {
+	font-weight: bold;
+}
+.habits {
+	width: 100%;
+	padding: 10px;
+	border: none;
+}
+.habit {
+	text-align: left;
+	padding-left: 10px;
+}
+tr:nth-child(even) {
+	background: rgba(255, 255, 255, 0.1);
+}
+tr:nth-child(odd) {
+	background: rgba(255, 255, 255, 0.2);
+}
