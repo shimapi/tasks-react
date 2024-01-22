@@ -25,3 +25,23 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
 	background: rgba(255, 255, 255, 0.2);
 }
+.add-habit-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.new-habit-button {
+	height: 36px;
+	padding: 9px;
+	margin-left: 3px;
+	align-content: center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: larger;
+}
+.new-habit-name {
+	height: 30px;
+	width: 200px;
+	font-size: larger;
+}

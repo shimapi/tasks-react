@@ -9,9 +9,19 @@ function AddHabit() {
 		<section className="weekly-habits">
 			<h2>{addHabitTitle}</h2>
 			{getCurrentDate()}
-			<form name="add-habit-form">
-				<input type="text" name="new-habit-name" id="new-habit-name" />
-				<input type="button" name="new-habit-button" value="añadir" />
+			<form name="add-habit-form" className="add-habit-form">
+				<input
+					type="text"
+					name="new-habit-name"
+					id="new-habit-name"
+					className="new-habit-name"
+				/>
+				<input
+					type="button"
+					name="new-habit-button"
+					value="añadir"
+					className="new-habit-button"
+				/>
 			</form>
 		</section>
 	);
