@@ -1,6 +1,6 @@
 import "./Habits.css";
 import { userHabits, addHabitTitle } from "./utils";
-import { getCurrentDate } from "./helpers.jsx";
+//import { getCurrentDate } from "./helpers.jsx";
 
 function AddHabit() {
 	console.log(userHabits);
@@ -8,7 +8,6 @@ function AddHabit() {
 	return (
 		<section className="weekly-habits">
 			<h2>{addHabitTitle}</h2>
-			{getCurrentDate()}
 			<form name="add-habit-form" className="add-habit-form">
 				<input
 					type="text"
