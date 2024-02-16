@@ -5,6 +5,7 @@ let habitKey;
 function HabitsTracker() {
 	//console.log(habitsBasic);
 	//console.log(days);
+	console.log(tableName);
 
 	return (
 		<section className="weekly-habits">
